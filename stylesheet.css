@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan-primary: hsl(179, 62%, 43%);
+    --Bright_yellow_primary: hsl(71, 73%, 54%);
+    
+    --Light_gray_neutral: hsl(204, 43%, 93%);
+    --Grayish_blue_neutral: hsl(218, 22%, 67%);
+
+    --white: #fff;
+}
+
+html {
+    font-family: 'Crimson Text', serif;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light_gray_neutral);
+    padding: 100px;
+ 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 14px 1px #00000024;
+    overflow: hidden;
+}
+
+.item {
+    padding: 30px;
+}
+
+.item-1 {
+    background-color: var(--white);
+}
+
+.item-1 h2{
+    color: var(--Cyan-primary);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+
+}
+
+.item-1 h3{
+    color: var(--Bright_yellow_primary);
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.item-1 p{
+    color: var(--Grayish_blue_neutral);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    
+}
+
+.item-2 {
+    background-color: var(--Cyan-primary);
+}
+
+.item-2 h3 {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.item-2 p {
+    color: var(--Light_gray_neutral);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.item-2 p span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.item-2 .button{
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--Bright_yellow_primary);
+    display: inline-block;
+    color: var(--white);
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 30px;
+    font-weight: 700;
+    box-shadow: 0px 4px 10px #00000033;
+    border-radius: 8px
+}
+
+.item-3 {
+    background-color: #4abebd;
+}
+
+.item-3 h3 {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+
+    
+}
+.item-3 p {
+    color: var(--Light_gray_neutral);
+    line-height: 1.5rem;
+    
+}
+
+@media only screen and (min-width: 760px){
+    .container{
+        grid-template-columns: 50% 50%;
+    }
+    .item-1 {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .item-2, 
+    .item-3 {
+        grid-row: 2;
+    }
+}
+
